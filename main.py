@@ -3,10 +3,13 @@ import time
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 import openai
-from config import bot_token, api_key
+# from config import bot_token, api_key
 from message_templates import message_templates
 
 logging.basicConfig(level=logging.INFO)
+
+bot_token = os.getenv('BOT_TOKEN')
+api_key = os.getenv('API_KEY')
 
 bot = Bot(token=bot_token)
 dp = Dispatcher(bot)
